@@ -1,0 +1,110 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Atom\n"
+"POT-Creation-Date: 2015-07-06 18:47-0500\n"
+"PO-Revision-Date: 2015-07-06 18:46-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: _includes/navigation.php:5
+msgid "Home"
+msgstr ""
+
+#: _includes/navigation.php:22 _includes/profile.php:39 searchform.php:3
+msgid "Search"
+msgstr ""
+
+#: _includes/navigation.php:28
+msgid "Subscribe"
+msgstr ""
+
+#: _includes/profile.php:20
+#, php-format
+msgid "Daily archive: <span>%s</span>"
+msgstr ""
+
+#: _includes/profile.php:22
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr ""
+
+#: _includes/profile.php:24
+#, php-format
+msgid "Annual Archives: <span>%s</span>"
+msgstr ""
+
+#: _includes/profile.php:26
+#, php-format
+msgid "Archive questions: <span>%s</span>"
+msgstr ""
+
+#: _includes/profile.php:28
+msgid "Blog archive"
+msgstr ""
+
+#: _includes/profile.php:42
+#, php-format
+msgid "Search for: %s"
+msgstr ""
+
+#: _includes/share.php:8
+msgid "Share"
+msgstr ""
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35 comments.php:51
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:38 comments.php:54
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:39 comments.php:55
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:182
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Atom"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://atom.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Performance First WordPress theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Eric Valois"
+msgstr ""

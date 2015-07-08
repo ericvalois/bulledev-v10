@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Atom\n"
+"POT-Creation-Date: 2015-07-06 21:50-0500\n"
+"PO-Revision-Date: 2015-07-06 21:51-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:4
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Cette page semble introuvable, peut-être pourriez vous utiliser l’un des "
+"liens ci-dessous ou effectuer une recherche?"
+
+#: 404.php:16
+msgid "Most Used Categories"
+msgstr "Catégories les plus utilisées"
+
+#: 404.php:35
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tentez de regarder dans les archives mensuelles. %1$s"
+
+#: _includes/navigation.php:5
+msgid "Home"
+msgstr "Accueil"
+
+#: _includes/navigation.php:22 _includes/profile.php:39 searchform.php:3
+msgid "Search"
+msgstr "Recherche"
+
+#: _includes/navigation.php:28
+msgid "Subscribe"
+msgstr "S’abonner"
+
+#: _includes/pagination.php:4
+msgid "Previous Entries"
+msgstr "Articles précédents"
+
+#: _includes/pagination.php:8
+msgid "Next Entries"
+msgstr "Articles suivants"
+
+#: _includes/post-list.php:12
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il nous est impossible de trouver ce que vous cherchez. Une recherche "
+"pourrait peut-être vous aider ?"
+
+#: _includes/profile.php:20
+#, php-format
+msgid "Daily archive: <span>%s</span>"
+msgstr "Archives journalières: <span>%s</span>"
+
+#: _includes/profile.php:22
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Archives mensuelles: <span>%s</span>"
+
+#: _includes/profile.php:24
+#, php-format
+msgid "Annual Archives: <span>%s</span>"
+msgstr "Archives annuelles : <span>%s</span>"
+
+#: _includes/profile.php:26
+#, php-format
+msgid "Archive questions: <span>%s</span>"
+msgstr "Archives des questions : <span>%s</span>"
+
+#: _includes/profile.php:28
+msgid "Blog archive"
+msgstr "Archives de blog"
+
+#: _includes/profile.php:42
+#, php-format
+msgid "Search for: %s"
+msgstr "Recherche pour : %s"
+
+#: _includes/profile.php:57
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups! Page introuvable."
+
+#: _includes/profile.php:58
+msgid "Error 404"
+msgstr "Erreur 404"
+
+#: _includes/share.php:8
+msgid "Share"
+msgstr "Partager"
+
+#: comments.php:28
+#, php-format
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Un commentaire"
+msgstr[1] "%1$s commentaires"
+
+#: comments.php:35 comments.php:51
+msgid "Comment navigation"
+msgstr "Commentaire de navigation"
+
+#: comments.php:38 comments.php:54
+msgid "Older Comments"
+msgstr "Anciens commentaires"
+
+#: comments.php:39 comments.php:55
+msgid "Newer Comments"
+msgstr "Nouveaux commentaires"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: functions.php:182
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente d’approbation"
+
+#: single.php:40
+msgid "Read more"
+msgstr "Lire Plus"
+
+#. Theme Name of the plugin/theme
+msgid "Atom"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://atom.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Performance First WordPress theme"
+msgstr "Thème WordPress conçu pour la vitesse"
+
+#. Author of the plugin/theme
+msgid "Eric Valois"
+msgstr ""
