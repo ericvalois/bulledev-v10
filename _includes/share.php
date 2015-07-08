@@ -1,4 +1,4 @@
-<a class="twitter" href="https://twitter.com/intent/tweet?text=<?php echo get_permalink(); ?> - <?php echo get_the_title(); ?> by @{{ site.authorTwitter }}"><span class="icon icon-twitter"></span> Tweet</a>
+<a class="twitter" href="https://twitter.com/intent/tweet?text=<?php echo get_the_title(); ?> - <?php echo get_permalink(); ?> by @bulledev"><span class="icon icon-twitter"></span> Tweet</a>
 
 <a class="facebook" href="#" onclick="
     window.open(

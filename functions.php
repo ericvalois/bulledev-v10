@@ -32,41 +32,15 @@ add_action( 'after_setup_theme', 'atom_v9_setup' );
 function atom_scripts_and_styles() {
 
     // Only on stage
-    if( !strpos($_SERVER['SERVER_NAME'], 'atom.com') ){
+    if( !strpos($_SERVER['SERVER_NAME'], 'bulledev.com') ){
         wp_enqueue_style( 'atom-style', get_stylesheet_uri() );
     }
 	
     // jQuery
-    if( is_page(199) || is_page(1485)  ){
+    if( is_page(199) || is_page(1485)  || is_page(1489)  ){
         wp_enqueue_script( 'jquery' ); 
     }
 
-
-
-
-}
-
-
-function validate_gravatar($email) {
-    // Craft a potential url and test its headers
-    $hash = md5(strtolower(trim($email)));
-    $uri = 'http://www.gravatar.com/avatar/' . $hash . '?d=404';
-    $headers = @get_headers($uri);
-    if (!preg_match("|200|", $headers[0])) {
-        $has_valid_avatar = FALSE;
-    } else {
-        $has_valid_avatar = TRUE;
-    }
-    return $has_valid_avatar;
-}
-
-add_filter("gform_field_value_avatar_color", "avatar_color");
-function avatar_color($value){
-
-    $rand = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f');
-    $color = '#'.$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)].$rand[rand(0,15)];
-
-    return $color;
 }
 
 add_filter( 'gform_submit_button', 'theme_t_wp_submit_button', 10, 2 );
@@ -209,7 +183,7 @@ function xtreme_enqueue_comments_reply() {
 
 // Defer all script
 function add_async( $tag, $handle ) {
-    if( is_admin() || is_page(199) || is_page(1485) ) {
+    if( is_admin() || is_page(199) || is_page(1485) || is_page(1489) ) {
         return $tag;
     }else{
         return str_replace( ' src', ' async src', $tag );
@@ -225,14 +199,12 @@ function hook_css()
 {
     $critical_syle = "<style>";
 
-    if( is_front_page() ){
-        $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/home.min.css");
-    }elseif( is_page(203) ){
-        $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/nous-joindre.min.css");
-    }elseif( get_post_type() == 'question' ){
-        $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/single-question.min.css");
-    }else{
+    if( is_front_page() || is_archive() ){
+        $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/archive.min.css");
+    }elseif( is_single ){
         $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/single.min.css");
+    }else{
+        $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/page.min.css");
     }
 
     $critical_syle .= "</style>";
@@ -293,9 +265,10 @@ function inject_js(){
         echo "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){";
         echo "(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),";
         echo "m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)";
-        echo "})(window,document,'script','//www.google-analytics.com/analytics.js','ga');";
+        echo "})(window,document,'script','" . get_bloginfo("template_directory") . "/assets/js/analytics.js','ga');";
 
         echo "ga('create', '', 'auto');";
+        echo "ga('create', 'UA-43847997-1', {'siteSpeedSampleRate': 100});";
         echo "ga('send', 'pageview');";
     echo '</script>';
 }

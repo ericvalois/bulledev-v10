@@ -6,7 +6,8 @@ module.exports = function(grunt) {
                 options: {
                   // cssmin will minify later
                   style: 'compressed',
-                  sourcemap: 'none'
+                  sourcemap: 'none',
+                  noCache: true
                 },
                 files: {
                   'style.css': 'sass/style.scss',
@@ -15,23 +16,23 @@ module.exports = function(grunt) {
         },
 
         criticalcss: {
-            home: {
+            archive: {
                 options: {
                     url: "http://bulledev.dev/",
                     width: 1200,
                     height: 900,
-                    outputfile: "critical/home.css",
+                    outputfile: "critical/archive.css",
                     filename: "style.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                     buffer: 800*1024,
                     ignoreConsole: false
                 }
             },
-            contact: {
+            page: {
                 options: {
-                    url: "http://bulledev.dev/nous-joindre/",
+                    url: "http://bulledev.dev/a-propos/",
                     width: 1200,
                     height: 900,
-                    outputfile: "critical/nous-joindre.css",
+                    outputfile: "critical/page.css",
                     filename: "style.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                     buffer: 800*1024,
                     ignoreConsole: false
@@ -43,17 +44,6 @@ module.exports = function(grunt) {
                     width: 1200,
                     height: 900,
                     outputfile: "critical/single.css",
-                    filename: "style.css", // Using path.resolve( path.join( ... ) ) is a good idea here
-                    buffer: 800*1024,
-                    ignoreConsole: false
-                }
-            },
-            single_question: {
-                options: {
-                    url: "http://bulledev.dev/question/deserunt-ipsam-vel-autem-eos-sit-excepteur-et-illum-magni-neque-tempore-qui-fugiat-consequat/",
-                    width: 1200,
-                    height: 900,
-                    outputfile: "critical/single-question.css",
                     filename: "style.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                     buffer: 800*1024,
                     ignoreConsole: false
