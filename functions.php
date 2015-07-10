@@ -190,12 +190,34 @@ function add_async( $tag, $handle ) {
     }
 }
 
-// Critical CSS only for main domain
-if( strpos($_SERVER['SERVER_NAME'], 'bulledev.com') ){
-    add_action('wp_head','hook_css', 5);
+// Inject icon font
+add_action('wp_head','inject_font', 4);
+function inject_font()
+{
+    $critical_syle = "<style>";
+
+    $critical_syle .= "@font-face {";
+        $critical_syle .= "font-family: 'icomoon';";
+        $critical_syle .= "src:url('" . get_bloginfo("template_directory") . "/assets/fonts/icomoon.eot?nkq9bc');";
+        $critical_syle .= "src:url('" . get_bloginfo("template_directory") . "/assets/fonts/icomoon.eot?#iefixnkq9bc') format('embedded-opentype'),";
+            $critical_syle .= "url('" . get_bloginfo("template_directory") . "/assets/fonts/icomoon.ttf?nkq9bc') format('truetype'),";
+            $critical_syle .= "url('" . get_bloginfo("template_directory") . "/assets/fonts/icomoon.woff?nkq9bc') format('woff'),";
+            $critical_syle .= "url('" . get_bloginfo("template_directory") . "/assets/fonts/icomoon.svg?nkq9bc#icomoon') format('svg');";
+        $critical_syle .= "font-weight: normal;";
+        $critical_syle .= "font-style: normal;";
+    $critical_syle .= "}";
+
+    $critical_syle .= "</style>";
+
+    echo $critical_syle;
 }
 
-function hook_css()
+// Critical CSS only for main domain
+if( strpos($_SERVER['SERVER_NAME'], 'bulledev.com') ){
+    add_action('wp_head','inject_css', 5);
+}
+
+function inject_css()
 {
     $critical_syle = "<style>";
 
@@ -265,9 +287,7 @@ function inject_js(){
         echo "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){";
         echo "(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),";
         echo "m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)";
-        echo "})(window,document,'script','" . get_bloginfo("template_directory") . "/assets/js/analytics.js','ga');";
-
-        echo "ga('create', '', 'auto');";
+        echo "})(window,document,'script','//www.google-analytics.com/analytics.js','ga');";
         echo "ga('create', 'UA-43847997-1', {'siteSpeedSampleRate': 100});";
         echo "ga('send', 'pageview');";
     echo '</script>';
