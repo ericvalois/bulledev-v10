@@ -10,7 +10,7 @@ img{ max-width: 100%; border-top-left-radius: 3px 3px; border-top-right-radius: 
 a{ text-decoration: none; color: rgb(86, 148, 241); }
 a{ }
 ul{ margin-left: 0px; padding-left: 0px; }
-li{ list-style-type: circle; list-style-position: inside; }
+ul li{ list-style-type: circle; list-style-position: inside; }
 h1{ font-size: 30px; letter-spacing: -1px; color: rgb(34, 34, 34); font-weight: bold; }
 h2{ margin-bottom: 40px; font: normal normal 300 24px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgb(17, 17, 17); }
  #post-list li, ul{ margin-bottom: 20px; }

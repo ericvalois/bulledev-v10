@@ -10,7 +10,7 @@ a{ text-decoration: none; color: rgb(86, 148, 241); }
 p a{ color: rgb(86, 148, 241); }
 a{ }
 ul{ margin-left: 0px; padding-left: 0px; }
-li{ list-style-type: circle; list-style-position: inside; }
+ul li{ list-style-type: circle; list-style-position: inside; }
 #post-body, p{ line-height: 1.7; }
 h1{ font-size: 30px; letter-spacing: -1px; color: rgb(34, 34, 34); font-weight: bold; }
 h2{ margin-bottom: 40px; font: normal normal 300 24px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgb(17, 17, 17); }
