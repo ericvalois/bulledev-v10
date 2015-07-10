@@ -37,7 +37,7 @@ function atom_scripts_and_styles() {
     }
 	
     // jQuery
-    if( is_page(199) || is_page(1485)  || is_page(1489)  ){
+    if( is_page(199) || is_page(1485) || is_page(1489) || is_page(1450) ){
         wp_enqueue_script( 'jquery' ); 
     }
 
@@ -183,7 +183,7 @@ function xtreme_enqueue_comments_reply() {
 
 // Defer all script
 function add_async( $tag, $handle ) {
-    if( is_admin() || is_page(199) || is_page(1485) || is_page(1489) ) {
+    if( is_admin() || is_page(199) || is_page(1485) || is_page(1489) || is_page(1450) ) {
         return $tag;
     }else{
         return str_replace( ' src', ' async src', $tag );
