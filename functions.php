@@ -223,7 +223,7 @@ function inject_css()
 
     if( is_front_page() || is_archive() ){
         $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/archive.min.css");
-    }elseif( is_single ){
+    }elseif( is_single() ){
         $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/single.min.css");
     }else{
         $critical_syle .= file_get_contents( get_bloginfo("template_directory") . "/critical/page.min.css");
