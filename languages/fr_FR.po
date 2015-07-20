@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Atom\n"
 "POT-Creation-Date: 2015-07-15 14:25-0500\n"
-"PO-Revision-Date: 2015-07-15 14:26-0500\n"
+"PO-Revision-Date: 2015-07-15 14:29-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -146,11 +146,11 @@ msgstr "Votre commentaire est en attente d’approbation"
 
 #: single.php:17
 msgid "Category"
-msgstr ""
+msgstr "Catégorie"
 
 #: single.php:19
 msgid "Subjects: "
-msgstr ""
+msgstr "Sujets :"
 
 #: single.php:50
 msgid "Read more"

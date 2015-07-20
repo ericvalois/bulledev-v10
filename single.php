@@ -13,28 +13,31 @@
 
 	    <hr>
 
-	    <footer>
-	    	<p><?php _e("Category","atom"); ?>: <?php echo get_the_term_list( $post->ID, 'category', ' ', ', ', '' ); ?><br></p>
+	    <?php if( get_post_type() == 'post' ): ?>
+	    	<footer>
+		    	<p><?php _e("Category","atom"); ?>: <?php echo get_the_term_list( $post->ID, 'category', ' ', ', ', '' ); ?><br></p>
 
-			<p><?php the_tags( __('Subjects: ','atom'), ', ', ''); ?> </p>
-	    </footer>
+				<p><?php the_tags( __('Subjects: ','atom'), ', ', ''); ?> </p>
+		    </footer>
+	    <?php endif; ?>
 	</article>
 
 
+	<?php if( get_post_type() == 'post' ): ?>
+		<footer id="post-meta" class="clearfix">
+		    <a href="http://twitter.com/{{ site.authorTwitter }}">
+		        <img class="avatar" src="<?php echo get_bloginfo("template_directory"); ?>/assets/images/ericvalois.png">
+		        <div>
+		            <span class="dark"><?php echo get_the_author(); ?></span>
+		            <span><?php bloginfo('description'); ?></span>
+		        </div>
+		    </a>
 
-	<footer id="post-meta" class="clearfix">
-	    <a href="http://twitter.com/{{ site.authorTwitter }}">
-	        <img class="avatar" src="<?php echo get_bloginfo("template_directory"); ?>/assets/images/ericvalois.png">
-	        <div>
-	            <span class="dark"><?php echo get_the_author(); ?></span>
-	            <span><?php bloginfo('description'); ?></span>
-	        </div>
-	    </a>
-
-	    <section id="sharing">
-	        <?php include(TEMPLATEPATH . "/_includes/share.php"); ?>
-	    </section>
-	</footer>
+		    <section id="sharing">
+		        <?php include(TEMPLATEPATH . "/_includes/share.php"); ?>
+		    </section>
+		</footer>
+	<?php endif; ?>
 
 	<?php
 		// If comments are open or we have at least one comment, load up the comment template
@@ -50,6 +53,13 @@
 	<h3><?php _e("Read more","atom"); ?></h3>
     <?php 
     	$args = array( 'posts_per_page' => 10 );
+
+    	if( get_post_type() == 'question' ){
+    		$args = array( 'posts_per_page' => 10, 'post_type' => 'question' );
+    	}else{
+    		$args = array( 'posts_per_page' => 10 );
+    	}
+
 		$last_posts = get_posts( $args );
 
 		foreach ( $last_posts as $post ) : setup_postdata( $post );
