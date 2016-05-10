@@ -282,13 +282,5 @@ function inject_js(){
             echo 'menu.classList.add("open");';
         echo '}';
         echo '});';
-        
-        // Google Analytics
-        echo "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){";
-        echo "(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),";
-        echo "m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)";
-        echo "})(window,document,'script','//www.google-analytics.com/analytics.js','ga');";
-        echo "ga('create', 'UA-43847997-1', {'siteSpeedSampleRate': 100});";
-        echo "ga('send', 'pageview');";
     echo '</script>';
 }
